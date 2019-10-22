@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<page-head :title="title"></page-head>
+		
 		<view class="uni-list">
 			<view class="list-cell" hover-class="uni-list-cell-hover" v-for="(item,index) in list" :key="index" @tap="openNew(item)">
 			    <view class="media-list">

@@ -1,0 +1,286 @@
+
+.select{
+	width: 31rpx;
+	height: 31rpx;
+	border: 1rpx solid #CCC;
+	margin-right: 20rpx;
+	border-radius: 4rpx;
+}
+.select-active{
+	width: 31rpx;
+	height: 31rpx;
+	margin-right: 20rpx;
+	border-radius: 4rpx;
+	border: 1rpx solid transparent;
+}
+.select-active .img{
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 4rpx;
+}
+
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.numInput {
+  overflow: hidden;
+  float: right;
+}
+.numInput text {
+    float: left;
+    color: #999;
+    font-size: 22rpx;
+    line-height: 50rpx;
+}
+.numInput input {
+    display: inline-block;
+    width: 80rpx;
+    float: left;
+    text-align: center;
+    color: #999;
+}
+.numInput .numbox-disabled {
+    color: #c0c0c0;
+}
+.shoppingcar {
+  background-color: #FAFAFA;
+  padding-bottom: 98rpx;
+}
+.shoppingcar .dianpu {
+  background-color: #FFFFFF;
+  margin-bottom: 20rpx;
+}
+.shoppingcar .dianpu .dianpu-name {
+  height: 70rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20rpx 32rpx;
+  border-bottom: 1px solid #FAFAFA;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rpx;
+}
+.shoppingcar .dianpu .select,
+.shoppingcar .dianpu .select-active {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+.shoppingcar .dianpu .dianpu-name .iconfont {
+  font-size: 45rpx;
+  color: #FF6B94;
+  line-height: 32rpx;
+  margin-right: 8rpx;
+}
+.shoppingcar .dianpu .dianpu-name .text {
+  font-size: 24rpx;
+  color: #333333;
+  line-height: 31rpx;
+}
+.shoppingcar .dianpu .shangpin {
+  width: 750rpx;
+  padding: 22rpx 32rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #FAFAFA;
+}
+.shoppingcar .dianpu .shangpin .select,
+.shoppingcar .dianpu .shangpin .select-active {
+  margin-top: 40rpx;
+}
+.shoppingcar .dianpu .shangpin .shangpin-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.shoppingcar .dianpu .shangpin .shangpin-info .img {
+  width: 108rpx;
+  height: 108rpx;
+  margin-right: 10rpx;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+.shoppingcar .dianpu .shangpin .shangpin-info .img image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8rpx;
+}
+.shoppingcar .dianpu .shangpin .shangpin-info .text-info .title-text {
+  line-height: 34rpx;
+}
+.shoppingcar .dianpu .shangpin .shangpin-info .text-info .title-text .biaoqian {
+  color: #FD395B;
+  font-size: 24rpx;
+  margin-right: 10rpx;
+}
+.shoppingcar .dianpu .shangpin .shangpin-info .text-info .title-text .name {
+  color: #333;
+  font-size: 24rpx;
+}
+.shoppingcar .dianpu .shangpin .shangpin-info .text-info .title-text .bieming {
+  color: #333;
+  font-size: 20rpx;
+  margin: 0 6rpx;
+}
+.shoppingcar .dianpu .shangpin .shangpin-info .text-info .title-text .youhui {
+  color: #FD395B;
+  font-size: 24rpx;
+  float: right;
+}
+.shoppingcar .dianpu .shangpin .shangpin-info .text-info .jiage {
+  font-size: 22rpx;
+  color: #999999;
+  display: inline-block;
+}
+.shoppingcar .dianpu .shangpin .shangpin-info .text-info .jiage .danjia {
+  color: #FD395B;
+  margin-right: 10rpx;
+}
+.shoppingcar .dianpu .jiesuan {
+  padding: 30rpx 30rpx 30rpx;
+  color: #333333;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.shoppingcar .dianpu .jiesuan .yuefei,
+.shoppingcar .dianpu .jiesuan .zongji {
+  font-size: 22rpx;
+  lighting-color: 40rpx;
+}
+.shoppingcar .bottom-jiesuan {
+  width: 100%;
+  height: 98rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px 0px 4rpx 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 4rpx 0px rgba(0, 0, 0, 0.1);
+}
+.shoppingcar .bottom-jiesuan .info {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 30rpx;
+  width: 510rpx;
+  font-size: 24rpx;
+  color: #333333;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.shoppingcar .bottom-jiesuan .info view {
+  line-height: 105rpx;
+}
+.shoppingcar .bottom-jiesuan .info .select,
+.shoppingcar .bottom-jiesuan .info .select-active {
+  display: inline-block;
+  vertical-align: middle;
+}
+.shoppingcar .bottom-jiesuan .info text {
+  line-height: 98rpx;
+  color: #FD395B;
+}
+.shoppingcar .bottom-jiesuan .btn {
+  width: 240rpx;
+  line-height: 98rpx;
+  color: #FFFFFF;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: #FD395B;
+}
+/* 全选的文字 */
+.allSelectText {
+  float: left;
+  overflow: hidden;
+  width: 150rpx;
+}
+.allSelectText .allText {
+    float: left;
+}
+.allSelectText > view:first-child {
+  display: inline-block;
+  float: left;
+}
+.scrollView {
+  width: 750rpx;
+}
+.scrollView .viewbox {
+  width: 900rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.scrollView .hong {
+  width: 150rpx;
+  background-color: red;
+  color: #FFFFFF;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+

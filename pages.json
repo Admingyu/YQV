@@ -5,7 +5,7 @@
             "path" : "pages/index/index",
             "style" : {
                 "navigationBarTitleText" : "主页",
-               "enablePullDownRefresh": true
+                "enablePullDownRefresh" : true
             }
         },
         {
@@ -22,40 +22,43 @@
                 "enablePullDownRefresh" : true
             }
         },
-		{
-		    "path" : "pages/hot/hot",
-		    "style" : {
-		        "navigationBarTitleText" : "推荐",
-		        "enablePullDownRefresh" : true
-		    }
-		},
-		{
-			"path": "pages/detail/detail",
-			"style": {
-				"navigationBarTitleText": "详情",
-				"navigationBarBackgroundColor": "#000000",
-				"backgroundColor": "#000000",
-				"app-plus": {
-					"bounce": "none",
-					"titleNView": {
-						"buttons": [{
-							"type": "share"
-						}]
-					}
-				},
-				"h5": {
-					"titleNView": {
-						"buttons": [{
-								"type": "share"
-							},
-							{
-								"type": "favorite"
-							}
-						]
-					}
-				}
-			}
-		},
+        {
+            "path" : "pages/hot/hot",
+            "style" : {
+                "navigationBarTitleText" : "商店",
+                "enablePullDownRefresh" : true
+            }
+        },
+        {
+            "path" : "pages/detail/detail",
+            "style" : {
+                "navigationBarTitleText" : "详情",
+                "navigationBarBackgroundColor" : "#000000",
+                "backgroundColor" : "#000000",
+                "app-plus" : {
+                    "bounce" : "none",
+                    "titleNView" : {
+                        "buttons" : [
+                            {
+                                "type" : "share"
+                            }
+                        ]
+                    }
+                },
+                "h5" : {
+                    "titleNView" : {
+                        "buttons" : [
+                            {
+                                "type" : "share"
+                            },
+                            {
+                                "type" : "favorite"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
         {
             "path" : "pages/info/info",
             "style" : {}
@@ -82,9 +85,45 @@
         {
             "path" : "pages/picture/picture",
             "style" : {
-				 "navigationBarTitleText" : "图片",
-				 "enablePullDownRefresh" : true
-			}
+                "navigationBarTitleText" : "图片",
+                "enablePullDownRefresh" : true
+            }
+        },
+        {
+            "path" : "pages/cart/cart",
+            "style" : {
+                "navigationBarTitleText" : "购物车",
+                "enablePullDownRefresh" : true
+            }
+        },
+		
+		{
+		    "path" : "pages/farm/farm",
+		    "style" : {
+		        "navigationBarTitleText" : "农场",
+		        "enablePullDownRefresh" : true
+		    }
+		},
+		
+		
+        {
+            "path" : "pages/moments/moments",
+            "style" : {
+                "navigationBarTitleText" : "动态",
+                "enablePullDownRefresh" : true
+            }
+        }
+        ,{
+            "path" : "pages/login/login",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/about/about",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/account/account",
+            "style" : {}
         }
     ],
     "globalStyle" : {
@@ -105,18 +144,18 @@
                 "selectedIconPath" : "static/index-1.png",
                 "text" : "主页"
             },
-			{
-			    "pagePath" : "pages/hot/hot",
-				"iconPath" : "static/hot-0.png",
-				"selectedIconPath" : "static/hot-1.png",
-				"text" : "推荐"
-			},
-			{
-			    "pagePath" : "pages/newlist/newlist",
-				"iconPath" : "static/hot-0.png",
-				"selectedIconPath" : "static/hot-1.png",
-				"text" : "推荐22"
-			},
+            {
+                "pagePath" : "pages/hot/hot",
+                "iconPath" : "static/hot-0.png",
+                "selectedIconPath" : "static/hot-1.png",
+                "text" : "商店"
+            },
+            {
+                "pagePath" : "pages/farm/farm",
+                "iconPath" : "static/hot-0.png",
+                "selectedIconPath" : "static/hot-1.png",
+                "text" : "农场"
+            },
             {
                 "pagePath" : "pages/center/center",
                 "iconPath" : "static/center-0.png",

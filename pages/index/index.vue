@@ -1,8 +1,8 @@
 <template>
 	<view class="center">
 		<swiper class="swiper" :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval" :duration="duration">
-			<swiper-item v-for="(item,index) in list" :key="index">
-				<view class="swiper-item" @click="goDetail(item)">
+			<swiper-item v-for="(item,index) in Imglist" :key="index">
+				<view class="swiper-item" @click="Print(item)">
 					<image :src="item.img_src" class="swiper-item-img"></image>
 				</view>
 			</swiper-item>
@@ -35,16 +35,17 @@
 	export default {
 		data() {
 			return {
-				list: [],
+				Imglist: [],
 				Newlist: [],
 				refreshing: false,
-				fetchPageNum: 1,
+				fetchPageNum: 5,
 				indicatorDots: true,
 				autoplay: true,
 				interval: 2000,
 				duration: 500,
 				newsList: [],
 				tabIndex: 0,
+				user_info: {},
 				grids: [{
 					name: '最新',
 					id: 0,
@@ -54,44 +55,72 @@
 					name: '大公司',
 					id: 23,
 					ref: 'company',
-					icon: 'http://placehold.it/150x150'
+					icon: 'https://picsum.photos/150/150/?image=1'
 				}, {
 					name: '内容',
 					id: 223,
 					ref: 'content',
-					icon: 'http://placehold.it/150x150'
+					icon: 'http://lorempixel.com/output/technics-q-c-150-150-9.jpg'
 				}, {
 					name: '消费',
 					id: 221,
 					ref: 'xiaofei',
-					icon: 'http://placehold.it/150x150'
+					icon: 'http://lorempixel.com/output/food-q-c-150-150-2.jpg'
 				}, {
 					name: '娱乐',
 					id: 225,
 					ref: 'yule',
-					icon: 'http://placehold.it/150x150'
+					icon: 'http://lorempixel.com/output/nightlife-q-c-150-150-6.jpg'
 				}, {
 					name: '区块链',
 					id: 208,
 					ref: 'qukuailian',
-					icon: 'http://placehold.it/150x150'
+					icon: 'http://lorempixel.com/output/technics-q-c-150-150-4.jpg'
 				}, ],
 			}
 		},
+		//页面加载完成时发送的请求
+		
 		onLoad: function() {
 			this.getImgData();
-			this.getNewData()
+			this.getNewData();
+			this.getUserInfo();
 		},
+		
 		methods: {
+			//获取用户信息
+			getUserInfo(){
+				uni.request({
+					url:this.$apiUrl + '/api/v0/user/info',
+					success:(ret) => {
+						if (ret.statusCode !== 200){
+							console.log("Fail UserInfo");
+						}else{
+							this.user_info = ret.data;
+						}
+					},
+					fail:(ret) => {
+						uni.onNetworkStatusChange(function(res){
+							console.log(res.isConnected);
+							console.log(res.networkType)
+						})
+					},
+					complete: (ret) => {
+						this.loading=false;
+					}
+				});
+			},
+			
 			getImgData() {
 				uni.request({
-					url: this.$serverUrl + '/api/picture/posts.php?page=' + (this.refreshing ? 1 : this.fetchPageNum) +
+					url: this.$apiUrl + '/api/v0/index/pictures?page_index' + (this.refreshing ? 1 : this.fetchPageNum) +
 						'&per_page=5',
+					//url: 'http://demo8328643.mockable.io/pictures',
 					success: (ret) => {
 						if (ret.statusCode !== 200) {
 							console.log("失败!");
 						} else {
-							this.list = ret.data;
+							this.Imglist = ret.data.data;
 						}
 					},
 					fail: (ret) => {
@@ -153,6 +182,9 @@
 					fail: () => {},
 					complete: () => {}
 				});
+			},
+			Print(s){
+				console.log(s)
 			}
 		}
 	}

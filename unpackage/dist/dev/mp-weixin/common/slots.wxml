@@ -1,0 +1,5 @@
+<import src="/components/uni-load-more.vue.wxml" />
+<import src="/components/uni-icon.vue.wxml" />
+<import src="/components/im-chat/chatinput.vue.wxml" />
+<import src="/components/custom-checkbox.vue.wxml" />
+

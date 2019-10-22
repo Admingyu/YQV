@@ -24,7 +24,7 @@
 			return {
 				refreshing: false,
 				lists: [],
-				fetchPageNum: 1
+				fetchPageNum: 4
 			}
 		},
 		onLoad() {

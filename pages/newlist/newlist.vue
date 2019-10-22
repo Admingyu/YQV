@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<page-head :title="title"></page-head>
+
 		<view class="uni-list">
 			<view class="list-cell" hover-class="uni-list-cell-hover" v-for="(item,index) in newsList" :key="index" @tap="openNew(item)">
 				<view class="media-list">
@@ -42,16 +42,17 @@
 		components: { //2注册组件
 			uniLoadMore
 		},
-		data: {
-			newsList: [],
-			title: "",
-			storage_key:'',
-			loadingText: '加载中...',
-			loadingType: 0, //定义加载方式 0---contentdown  1---contentrefresh 2---contentnomore
-			contentText: {
-				contentdown: '上拉显示更多',
-				contentrefresh: '正在加载...',
-				contentnomore: '没有更多数据了'
+		data() {
+			return{
+				newsList: [],
+				title: "",
+				loadingText: '加载中...',
+				loadingType: 0, //定义加载方式 0---contentdown  1---contentrefresh 2---contentnomore
+				contentText: {
+					contentdown: '上拉显示更多',
+					contentrefresh: '正在加载...',
+					contentnomore: '没有更多数据了'
+				},
 			}
 		},
 	     
@@ -59,8 +60,10 @@
 			//console.log("接收id:" + JSON.stringify(e.iconId));
 			this.storage_key =  e.iconId;
 			_self = this;
+			e = this.getnewsList(e); // 修改1111111
+			console.log(e);
 			uni.setNavigationBarTitle({
-				title: e.name
+				title: ""//"页面标题"//
 			});
 			//页面一加载时请求一次数据
 			this.getnewsList();

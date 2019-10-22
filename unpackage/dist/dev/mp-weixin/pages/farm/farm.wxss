@@ -1,0 +1,26 @@
+
+.frame{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.plant{
+	margin-bottom: 80px;
+}
+.plant-name {
+-webkit-box-flex: 1;
+-webkit-flex: 1;
+    -ms-flex: 1;
+        flex: 1;
+margin-top: 6rpx;
+line-height: 40rpx;
+font-size: 30rpx;
+-webkit-columns: #303030;
+   -moz-columns: #303030;
+        columns: #303030;
+}
+.plant-image{
+	-webkit-align-content: center;
+	    -ms-flex-line-pack: center;
+	        align-content: center;
+}
+

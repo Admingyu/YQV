@@ -23,7 +23,7 @@
 				refreshing: false,
 				providerList: [],
 				list: [],
-				fetchPageNum: 1
+				fetchPageNum: 5
 			}
 		},
 		onLoad() {
@@ -96,7 +96,7 @@
 								this.refreshing = false;
 								uni.stopPullDownRefresh()
 								this.list = ret.data;
-								this.fetchPageNum = 2;
+								this.fetchPageNum = 3;
 							} else {
 								this.list = this.list.concat(ret.data);
 								this.fetchPageNum += 1;
